@@ -743,6 +743,80 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                             </topics>
                         </children>
                     </topic>
+                    <topic id="6">
+                        <title>Compatibility Tests</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="6.1">
+                                    <title>Version Support</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="6.1.1">
+                                                <title>Base Compatibility</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="6.1.1.1"><title>Installation verification</title></topic>
+                                                        <topic id="6.1.1.2"><title>UI rendering</title></topic>
+                                                        <topic id="6.1.1.3"><title>Core functionality</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="6.1.2">
+                                                <title>Permission Management</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="6.1.2.1"><title>Runtime permissions</title></topic>
+                                                        <topic id="6.1.2.2"><title>Storage access</title></topic>
+                                                        <topic id="6.1.2.3"><title>VPN configuration</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="6.1.3">
+                                                <title>API Compatibility</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="6.1.3.1"><title>Feature support</title></topic>
+                                                        <topic id="6.1.3.2"><title>Fallback mechanisms</title></topic>
+                                                        <topic id="6.1.3.3"><title>API deprecation</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="6.1.4">
+                                                <title>Installation Scenarios</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="6.1.4.1"><title>Fresh install</title></topic>
+                                                        <topic id="6.1.4.2"><title>Version upgrade</title></topic>
+                                                        <topic id="6.1.4.3"><title>Data migration</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="6.1.5">
+                                                <title>Security Framework</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="6.1.5.1"><title>Security models</title></topic>
+                                                        <topic id="6.1.5.2"><title>Certificate handling</title></topic>
+                                                        <topic id="6.1.5.3"><title>Encryption support</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="6.1.6">
+                                                <title>Edge Cases</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="6.1.6.1"><title>Version transitions</title></topic>
+                                                        <topic id="6.1.6.2"><title>Feature availability</title></topic>
+                                                        <topic id="6.1.6.3"><title>Error scenarios</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
                 </topics>
             </children>
         </topic>
