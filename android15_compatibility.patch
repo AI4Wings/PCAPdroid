@@ -1,0 +1,167 @@
+diff --git a/.project b/.project
+new file mode 100644
+index 00000000..be35fcfc
+--- /dev/null
++++ b/.project
+@@ -0,0 +1,28 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<projectDescription>
++	<name>PCAPdroid</name>
++	<comment>Project PCAPdroid created by Buildship.</comment>
++	<projects>
++	</projects>
++	<buildSpec>
++		<buildCommand>
++			<name>org.eclipse.buildship.core.gradleprojectbuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++	</buildSpec>
++	<natures>
++		<nature>org.eclipse.buildship.core.gradleprojectnature</nature>
++	</natures>
++	<filteredResources>
++		<filter>
++			<id>1735203348020</id>
++			<name></name>
++			<type>30</type>
++			<matcher>
++				<id>org.eclipse.core.resources.regexFilterMatcher</id>
++				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
++			</matcher>
++		</filter>
++	</filteredResources>
++</projectDescription>
+diff --git a/.settings/org.eclipse.buildship.core.prefs b/.settings/org.eclipse.buildship.core.prefs
+new file mode 100644
+index 00000000..b6dc6ade
+--- /dev/null
++++ b/.settings/org.eclipse.buildship.core.prefs
+@@ -0,0 +1,13 @@
++arguments=--init-script /opt/.devin/vscode_bin/vscode-reh-server-linux-x64-122662-bf85ae538ec/vscode-reh-server-linux-x64/extensions/redhat.java-1.32.0-linux-x64/server/configuration/org.eclipse.osgi/55/0/.cp/gradle/init/init.gradle --init-script /opt/.devin/vscode_bin/vscode-reh-server-linux-x64-122662-bf85ae538ec/vscode-reh-server-linux-x64/extensions/redhat.java-1.32.0-linux-x64/server/configuration/org.eclipse.osgi/55/0/.cp/gradle/protobuf/init.gradle
++auto.sync=false
++build.scans.enabled=false
++connection.gradle.distribution=GRADLE_DISTRIBUTION(WRAPPER)
++connection.project.dir=
++eclipse.preferences.version=1
++gradle.user.home=
++java.home=/opt/.devin/vscode_bin/vscode-reh-server-linux-x64-122662-bf85ae538ec/vscode-reh-server-linux-x64/extensions/redhat.java-1.32.0-linux-x64/jre/17.0.11-linux-x86_64
++jvm.arguments=
++offline.mode=false
++override.workspace.settings=true
++show.console.view=true
++show.executions.view=true
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+index 4e5c6fe0..030f6474 100644
+--- a/app/src/main/AndroidManifest.xml
++++ b/app/src/main/AndroidManifest.xml
+@@ -138,7 +138,13 @@
+                 android:value="waits for the termination of the active VpnService"/>
+         </service>
+ 
+-        <receiver android:name="com.emanuelef.remote_capture.ActionReceiver" />
++        <receiver 
++            android:name="com.emanuelef.remote_capture.ActionReceiver"
++            android:exported="true">
++            <intent-filter>
++                <action android:name="com.emanuelef.remote_capture.UNBLOCK_APP" />
++            </intent-filter>
++        </receiver>
+ 
+         <receiver
+             android:name=".BootReceiver"
+@@ -150,4 +156,4 @@
+         </receiver>
+     </application>
+ 
+-</manifest>
+\ No newline at end of file
++</manifest>
+diff --git a/app/src/main/java/com/emanuelef/remote_capture/CaptureService.java b/app/src/main/java/com/emanuelef/remote_capture/CaptureService.java
+index 4f4cd153..16445391 100644
+--- a/app/src/main/java/com/emanuelef/remote_capture/CaptureService.java
++++ b/app/src/main/java/com/emanuelef/remote_capture/CaptureService.java
+@@ -681,6 +681,19 @@ public class CaptureService extends VpnService implements Runnable {
+         // Status notification builder
+         PendingIntent pi = PendingIntent.getActivity(this, 0,
+                 new Intent(this, MainActivity.class), Utils.getIntentFlags(PendingIntent.FLAG_UPDATE_CURRENT));
++        // Create public version of status notification (no connection details)
++        Notification publicStatusNotification = new NotificationCompat.Builder(this, NOTIFY_CHAN_VPNSERVICE)
++                .setSmallIcon(R.drawable.ic_logo)
++                .setColor(ContextCompat.getColor(this, R.color.colorPrimary))
++                .setContentIntent(pi)
++                .setOngoing(true)
++                .setAutoCancel(false)
++                .setContentTitle(getResources().getString(R.string.capture_running))
++                .setContentText(getString(R.string.notification_sensitive))
++                .setCategory(NotificationCompat.CATEGORY_STATUS)
++                .setPriority(NotificationCompat.PRIORITY_LOW)
++                .build();
++
+         mStatusBuilder = new NotificationCompat.Builder(this, NOTIFY_CHAN_VPNSERVICE)
+                 .setSmallIcon(R.drawable.ic_logo)
+                 .setColor(ContextCompat.getColor(this, R.color.colorPrimary))
+@@ -690,14 +703,26 @@ public class CaptureService extends VpnService implements Runnable {
+                 .setContentTitle(getResources().getString(R.string.capture_running))
+                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+                 .setCategory(NotificationCompat.CATEGORY_STATUS)
++                .setPublicVersion(publicStatusNotification)
+                 .setPriority(NotificationCompat.PRIORITY_LOW); // see IMPORTANCE_LOW
+ 
+         // Malware notification builder
++        // Create public version of malware notification (no sensitive details)
++        Notification publicMalwareNotification = new NotificationCompat.Builder(this, NOTIFY_CHAN_MALWARE_DETECTION)
++                .setSmallIcon(R.drawable.ic_skull)
++                .setAutoCancel(true)
++                .setContentTitle(getString(R.string.malware_detection))
++                .setContentText(getString(R.string.notification_sensitive))
++                .setCategory(NotificationCompat.CATEGORY_STATUS)
++                .setPriority(NotificationCompat.PRIORITY_HIGH)
++                .build();
++
+         mMalwareBuilder = new NotificationCompat.Builder(this, NOTIFY_CHAN_MALWARE_DETECTION)
+                 .setSmallIcon(R.drawable.ic_skull)
+                 .setAutoCancel(true)
+                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+                 .setCategory(NotificationCompat.CATEGORY_STATUS)
++                .setPublicVersion(publicMalwareNotification)
+                 .setPriority(NotificationCompat.PRIORITY_HIGH); // see IMPORTANCE_HIGH
+     }
+ 
+@@ -753,6 +778,16 @@ public class CaptureService extends VpnService implements Runnable {
+     }
+ 
+     public void notifyLowMemory(CharSequence msg) {
++        // Create public version of low memory notification (no specific memory details)
++        Notification publicNotification = new NotificationCompat.Builder(this, NOTIFY_CHAN_OTHER)
++                .setAutoCancel(true)
++                .setSmallIcon(R.drawable.ic_logo)
++                .setColor(ContextCompat.getColor(this, R.color.colorPrimary))
++                .setCategory(NotificationCompat.CATEGORY_STATUS)
++                .setContentTitle(getString(R.string.low_memory))
++                .setContentText(getString(R.string.notification_sensitive))
++                .build();
++
+         Notification notification = new NotificationCompat.Builder(this, NOTIFY_CHAN_OTHER)
+                 .setAutoCancel(true)
+                 .setSmallIcon(R.drawable.ic_logo)
+@@ -762,6 +797,7 @@ public class CaptureService extends VpnService implements Runnable {
+                 .setWhen(System.currentTimeMillis())
+                 .setContentTitle(getString(R.string.low_memory))
+                 .setContentText(msg)
++                .setPublicVersion(publicNotification)
+                 .build();
+ 
+         mHandler.post(() -> Utils.sendImportantNotification(this, NOTIFY_ID_LOW_MEMORY, notification));
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+index ac313cde..8a64f4e4 100644
+--- a/app/src/main/res/values/strings.xml
++++ b/app/src/main/res/values/strings.xml
+@@ -117,6 +117,7 @@
+     <string name="error">Error</string>
+     <string name="conn_status_unreachable">Unreachable</string>
+     <string name="other_prefs">Other</string>
++    <string name="notification_sensitive">Sensitive content hidden</string>
+     <string name="app_language">App language</string>
+     <string name="lang_english">English</string>
+     <string name="system_default">System default</string>
