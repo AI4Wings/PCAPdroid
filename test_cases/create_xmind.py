@@ -391,6 +391,147 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                                         </topics>
                                     </children>
                                 </topic>
+                                <topic id="3.3">
+                                    <title>UDP Export</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="3.3.1">
+                                                <title>Connection Setup</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.3.1.1"><title>Target configuration</title></topic>
+                                                        <topic id="3.3.1.2"><title>Connection validation</title></topic>
+                                                        <topic id="3.3.1.3"><title>Status monitoring</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.3.2">
+                                                <title>Real-time Streaming</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.3.2.1"><title>Stream monitoring</title></topic>
+                                                        <topic id="3.3.2.2"><title>Statistics tracking</title></topic>
+                                                        <topic id="3.3.2.3"><title>Stream controls</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.3.3">
+                                                <title>Tool Integration</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.3.3.1"><title>Wireshark support</title></topic>
+                                                        <topic id="3.3.3.2"><title>Custom receivers</title></topic>
+                                                        <topic id="3.3.3.3"><title>Format compatibility</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.3.4">
+                                                <title>Network Compatibility</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.3.4.1"><title>Network types</title></topic>
+                                                        <topic id="3.3.4.2"><title>Network conditions</title></topic>
+                                                        <topic id="3.3.4.3"><title>Network switching</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.3.5">
+                                                <title>Performance</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.3.5.1"><title>Load handling</title></topic>
+                                                        <topic id="3.3.5.2"><title>Resource usage</title></topic>
+                                                        <topic id="3.3.5.3"><title>Recovery behavior</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.3.6">
+                                                <title>Error Management</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.3.6.1"><title>Error detection</title></topic>
+                                                        <topic id="3.3.6.2"><title>Recovery process</title></topic>
+                                                        <topic id="3.3.6.3"><title>Data preservation</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                    <topic id="4">
+                        <title>TLS Decryption</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="4.1">
+                                    <title>Setup Process</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="4.1.1">
+                                                <title>Addon Installation</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="4.1.1.1"><title>Download and install</title></topic>
+                                                        <topic id="4.1.1.2"><title>Integration check</title></topic>
+                                                        <topic id="4.1.1.3"><title>Status verification</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="4.1.2">
+                                                <title>Certificate Management</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="4.1.2.1"><title>CA generation</title></topic>
+                                                        <topic id="4.1.2.2"><title>System installation</title></topic>
+                                                        <topic id="4.1.2.3"><title>Trust validation</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="4.1.3">
+                                                <title>Permission Setup</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="4.1.3.1"><title>System permissions</title></topic>
+                                                        <topic id="4.1.3.2"><title>App access</title></topic>
+                                                        <topic id="4.1.3.3"><title>State persistence</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="4.1.4">
+                                                <title>Version Compatibility</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="4.1.4.1"><title>Android support</title></topic>
+                                                        <topic id="4.1.4.2"><title>Security models</title></topic>
+                                                        <topic id="4.1.4.3"><title>Permission handling</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="4.1.5">
+                                                <title>Security Validation</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="4.1.5.1"><title>Certificate chain</title></topic>
+                                                        <topic id="4.1.5.2"><title>Key protection</title></topic>
+                                                        <topic id="4.1.5.3"><title>Encryption strength</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="4.1.6">
+                                                <title>Error Handling</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="4.1.6.1"><title>Installation errors</title></topic>
+                                                        <topic id="4.1.6.2"><title>Recovery process</title></topic>
+                                                        <topic id="4.1.6.3"><title>State preservation</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
                             </topics>
                         </children>
                     </topic>
