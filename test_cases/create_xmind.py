@@ -253,6 +253,80 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                             </topics>
                         </children>
                     </topic>
+                    <topic id="3">
+                        <title>Dump Mode</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="3.1">
+                                    <title>HTTP Server</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="3.1.1">
+                                                <title>Server Setup</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.1.1.1"><title>Configuration</title></topic>
+                                                        <topic id="3.1.1.2"><title>Port binding</title></topic>
+                                                        <topic id="3.1.1.3"><title>Status monitoring</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.1.2">
+                                                <title>PCAP Generation</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.1.2.1"><title>File creation</title></topic>
+                                                        <topic id="3.1.2.2"><title>Data updates</title></topic>
+                                                        <topic id="3.1.2.3"><title>Integrity checks</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.1.3">
+                                                <title>Download Features</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.1.3.1"><title>File access</title></topic>
+                                                        <topic id="3.1.3.2"><title>Resume support</title></topic>
+                                                        <topic id="3.1.3.3"><title>Progress tracking</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.1.4">
+                                                <title>Network Support</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.1.4.1"><title>Connection types</title></topic>
+                                                        <topic id="3.1.4.2"><title>Access modes</title></topic>
+                                                        <topic id="3.1.4.3"><title>Network switching</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.1.5">
+                                                <title>Security</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.1.5.1"><title>Authentication</title></topic>
+                                                        <topic id="3.1.5.2"><title>Access control</title></topic>
+                                                        <topic id="3.1.5.3"><title>Secure transfer</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.1.6">
+                                                <title>Error Handling</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.1.6.1"><title>Error detection</title></topic>
+                                                        <topic id="3.1.6.2"><title>Recovery process</title></topic>
+                                                        <topic id="3.1.6.3"><title>Data preservation</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
                 </topics>
             </children>
         </topic>
