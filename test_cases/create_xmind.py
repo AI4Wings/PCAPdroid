@@ -884,6 +884,73 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                             </topics>
                         </children>
                     </topic>
+                    <topic id="6.3">
+                        <title>Network Support</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="6.3.1">
+                                    <title>Mobile Data</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="6.3.1.1"><title>Signal handling</title></topic>
+                                            <topic id="6.3.1.2"><title>Data flow</title></topic>
+                                            <topic id="6.3.1.3"><title>Connection tracking</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="6.3.2">
+                                    <title>WiFi Operation</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="6.3.2.1"><title>Security types</title></topic>
+                                            <topic id="6.3.2.2"><title>Bandwidth monitoring</title></topic>
+                                            <topic id="6.3.2.3"><title>Connection stability</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="6.3.3">
+                                    <title>Network Switching</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="6.3.3.1"><title>Handover handling</title></topic>
+                                            <topic id="6.3.3.2"><title>Data continuity</title></topic>
+                                            <topic id="6.3.3.3"><title>Capture persistence</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="6.3.4">
+                                    <title>Protocol Support</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="6.3.4.1"><title>IPv4/IPv6</title></topic>
+                                            <topic id="6.3.4.2"><title>Protocol handling</title></topic>
+                                            <topic id="6.3.4.3"><title>Encryption support</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="6.3.5">
+                                    <title>VPN Integration</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="6.3.5.1"><title>VPN compatibility</title></topic>
+                                            <topic id="6.3.5.2"><title>Conflict resolution</title></topic>
+                                            <topic id="6.3.5.3"><title>Performance impact</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="6.3.6">
+                                    <title>Error Management</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="6.3.6.1"><title>Disconnection handling</title></topic>
+                                            <topic id="6.3.6.2"><title>Recovery process</title></topic>
+                                            <topic id="6.3.6.3"><title>State preservation</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
                 </topics>
             </children>
         </topic>
