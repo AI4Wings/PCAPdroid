@@ -673,6 +673,73 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                                         </topics>
                                     </children>
                                 </topic>
+                                <topic id="5.2">
+                                    <title>Root Capture</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="5.2.1">
+                                                <title>Permission Management</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="5.2.1.1"><title>Access request</title></topic>
+                                                        <topic id="5.2.1.2"><title>Permission handling</title></topic>
+                                                        <topic id="5.2.1.3"><title>Status verification</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="5.2.2">
+                                                <title>Interface Management</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="5.2.2.1"><title>Interface scanning</title></topic>
+                                                        <topic id="5.2.2.2"><title>Selection handling</title></topic>
+                                                        <topic id="5.2.2.3"><title>Status monitoring</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="5.2.3">
+                                                <title>Capture Settings</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="5.2.3.1"><title>Mode configuration</title></topic>
+                                                        <topic id="5.2.3.2"><title>Filter management</title></topic>
+                                                        <topic id="5.2.3.3"><title>Settings validation</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="5.2.4">
+                                                <title>Root Compatibility</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="5.2.4.1"><title>Root solution support</title></topic>
+                                                        <topic id="5.2.4.2"><title>Version handling</title></topic>
+                                                        <topic id="5.2.4.3"><title>Custom solutions</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="5.2.5">
+                                                <title>Capture Stability</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="5.2.5.1"><title>Long-term monitoring</title></topic>
+                                                        <topic id="5.2.5.2"><title>Resource management</title></topic>
+                                                        <topic id="5.2.5.3"><title>Data integrity</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="5.2.6">
+                                                <title>Error Handling</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="5.2.6.1"><title>Root loss recovery</title></topic>
+                                                        <topic id="5.2.6.2"><title>Interface errors</title></topic>
+                                                        <topic id="5.2.6.3"><title>State restoration</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
                             </topics>
                         </children>
                     </topic>
