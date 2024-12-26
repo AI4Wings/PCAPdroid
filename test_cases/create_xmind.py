@@ -324,6 +324,73 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                                         </topics>
                                     </children>
                                 </topic>
+                                <topic id="3.2">
+                                    <title>File Operations</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="3.2.1">
+                                                <title>Storage Permissions</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.2.1.1"><title>Permission requests</title></topic>
+                                                        <topic id="3.2.1.2"><title>Storage access</title></topic>
+                                                        <topic id="3.2.1.3"><title>Location selection</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.2.2">
+                                                <title>File Operations</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.2.2.1"><title>Creation and writing</title></topic>
+                                                        <topic id="3.2.2.2"><title>Data integrity</title></topic>
+                                                        <topic id="3.2.2.3"><title>PCAP format</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.2.3">
+                                                <title>File Sharing</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.2.3.1"><title>Share methods</title></topic>
+                                                        <topic id="3.2.3.2"><title>Transfer process</title></topic>
+                                                        <topic id="3.2.3.3"><title>Integrity verification</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.2.4">
+                                                <title>Storage Compatibility</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.2.4.1"><title>Storage types</title></topic>
+                                                        <topic id="3.2.4.2"><title>Access methods</title></topic>
+                                                        <topic id="3.2.4.3"><title>Scoped storage</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.2.5">
+                                                <title>Error Management</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.2.5.1"><title>Storage limits</title></topic>
+                                                        <topic id="3.2.5.2"><title>Error recovery</title></topic>
+                                                        <topic id="3.2.5.3"><title>Data preservation</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="3.2.6">
+                                                <title>File Management</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="3.2.6.1"><title>File operations</title></topic>
+                                                        <topic id="3.2.6.2"><title>UI updates</title></topic>
+                                                        <topic id="3.2.6.3"><title>Operation validation</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
                             </topics>
                         </children>
                     </topic>
