@@ -602,6 +602,80 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                             </topics>
                         </children>
                     </topic>
+                    <topic id="5">
+                        <title>Advanced Features</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="5.1">
+                                    <title>DNS Management</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="5.1.1">
+                                                <title>Server Configuration</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="5.1.1.1"><title>Auto-detection</title></topic>
+                                                        <topic id="5.1.1.2"><title>Manual override</title></topic>
+                                                        <topic id="5.1.1.3"><title>Persistence</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="5.1.2">
+                                                <title>Protocol Support</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="5.1.2.1"><title>Protocol selection</title></topic>
+                                                        <topic id="5.1.2.2"><title>Settings configuration</title></topic>
+                                                        <topic id="5.1.2.3"><title>Resolution testing</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="5.1.3">
+                                                <title>DoH Integration</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="5.1.3.1"><title>Server setup</title></topic>
+                                                        <topic id="5.1.3.2"><title>Custom endpoints</title></topic>
+                                                        <topic id="5.1.3.3"><title>HTTPS validation</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="5.1.4">
+                                                <title>IP Protocol Support</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="5.1.4.1"><title>IPv4/IPv6 handling</title></topic>
+                                                        <topic id="5.1.4.2"><title>Dual-stack operation</title></topic>
+                                                        <topic id="5.1.4.3"><title>Fallback mechanisms</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="5.1.5">
+                                                <title>Security Features</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="5.1.5.1"><title>DNSSEC validation</title></topic>
+                                                        <topic id="5.1.5.2"><title>Certificate handling</title></topic>
+                                                        <topic id="5.1.5.3"><title>Filtering rules</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="5.1.6">
+                                                <title>Network Handling</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="5.1.6.1"><title>State transitions</title></topic>
+                                                        <topic id="5.1.6.2"><title>Connection management</title></topic>
+                                                        <topic id="5.1.6.3"><title>Cache behavior</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
                 </topics>
             </children>
         </topic>
