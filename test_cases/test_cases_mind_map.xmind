@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xmap-content version="1.0">
+    <sheet id="root">
+        <topic id="root" structure-class="org.xmind.ui.map.unbalanced">
+            <title>PCAPdroid Test Cases</title>
+            
+            <!-- Core Functionality Tests -->
+            <children>
+                <topic id="core-functionality">
+                    <title>Core Functionality Tests</title>
+                    <children>
+                        <topic id="vpn-service">
+                            <title>VPN Service</title>
+                            <children>
+                                <topic id="vpn-setup">
+                                    <title>Initial Setup</title>
+                                    <children>
+                                        <topic id="vpn-permission"><title>VPN Permission Dialog</title></topic>
+                                        <topic id="first-start"><title>First Start Experience</title></topic>
+                                        <topic id="notification-icon"><title>Notification Bar Icon</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="battery-opt">
+                                    <title>Battery Optimization</title>
+                                    <children>
+                                        <topic id="background-running"><title>Background Operation</title></topic>
+                                        <topic id="persistent-notification"><title>Persistent Notification</title></topic>
+                                        <topic id="traffic-stats"><title>Traffic Statistics Display</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="service-recovery">
+                                    <title>Service Recovery</title>
+                                    <children>
+                                        <topic id="auto-restart"><title>Automatic Restart</title></topic>
+                                        <topic id="state-persistence"><title>State Persistence</title></topic>
+                                        <topic id="error-handling"><title>Error Recovery</title></topic>
+                                    </children>
+                                </topic>
+                            </children>
+                        </topic>
+                        <topic id="packet-capture">
+                            <title>Packet Capture</title>
+                            <children>
+                                <topic id="basic-capture"><title>Basic Functionality</title></topic>
+                                <topic id="traffic-filter"><title>Traffic Filtering</title></topic>
+                                <topic id="conn-tracking"><title>Connection Tracking</title></topic>
+                            </children>
+                        </topic>
+                    </children>
+                </topic>
+
+                <!-- UI/UX Tests -->
+                <topic id="ui-ux">
+                    <title>UI/UX Tests</title>
+                    <children>
+                        <topic id="main-interface">
+                            <title>Main Interface</title>
+                            <children>
+                                <topic id="nav-drawer">
+                                    <title>Navigation Drawer</title>
+                                    <children>
+                                        <topic id="status-tab"><title>Status Tab Navigation</title></topic>
+                                        <topic id="connections-tab"><title>Connections Tab Navigation</title></topic>
+                                        <topic id="apps-tab"><title>Apps Tab Navigation</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="conn-list">
+                                    <title>Connection List</title>
+                                    <children>
+                                        <topic id="app-info"><title>App Icon and Name Display</title></topic>
+                                        <topic id="protocol-info"><title>Protocol and Port Display</title></topic>
+                                        <topic id="connection-status"><title>Status Indicator States</title></topic>
+                                        <topic id="traffic-volume"><title>Traffic Volume Display</title></topic>
+                                        <topic id="connection-details"><title>Detailed View Interaction</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="search-filter">
+                                    <title>Search and Filter</title>
+                                    <children>
+                                        <topic id="search-bar"><title>Search Bar Functionality</title></topic>
+                                        <topic id="filter-dialog"><title>Filter Dialog Options</title></topic>
+                                        <topic id="hidden-connections"><title>Hidden Connections Management</title></topic>
+                                        <topic id="app-filtering"><title>App-based Filtering</title></topic>
+                                        <topic id="filter-chips"><title>Filter Chips Display</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="app-details">
+                                    <title>App Details View</title>
+                                    <children>
+                                        <topic id="metadata-display"><title>App Metadata Display</title></topic>
+                                        <topic id="permissions-view"><title>Permissions Information</title></topic>
+                                        <topic id="system-settings"><title>System Settings Access</title></topic>
+                                        <topic id="connections-shortcut"><title>App Connections Shortcut</title></topic>
+                                    </children>
+                                </topic>
+                            </children>
+                        </topic>
+                        <topic id="settings-mgmt">
+                            <title>Settings Management</title>
+                            <children>
+                                <topic id="settings-persist"><title>Settings Persistence</title></topic>
+                                <topic id="perm-mgmt"><title>Permission Management</title></topic>
+                                <topic id="feature-toggle"><title>Feature Toggles</title></topic>
+                            </children>
+                        </topic>
+                    </children>
+                </topic>
+
+                <!-- Dump Mode Tests -->
+                <topic id="dump-mode">
+                    <title>Dump Mode Tests</title>
+                    <children>
+                        <topic id="http-server">
+                            <title>HTTP Server Mode</title>
+                            <children>
+                                <topic id="server-setup">
+                                    <title>Server Setup</title>
+                                    <children>
+                                        <topic id="port-config"><title>Port Configuration</title></topic>
+                                        <topic id="server-start"><title>Server Start/Stop</title></topic>
+                                        <topic id="network-security"><title>Network Security</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="pcap-gen">
+                                    <title>PCAP Generation</title>
+                                    <children>
+                                        <topic id="capture-start"><title>Capture Start Time</title></topic>
+                                        <topic id="packet-format"><title>Packet Format Validation</title></topic>
+                                        <topic id="stream-handling"><title>Stream Management</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="download-func">
+                                    <title>Download Function</title>
+                                    <children>
+                                        <topic id="url-access"><title>URL Accessibility</title></topic>
+                                        <topic id="progress-indicator"><title>Progress Indication</title></topic>
+                                        <topic id="download-completion"><title>Completion Handling</title></topic>
+                                    </children>
+                                </topic>
+                            </children>
+                        </topic>
+                        <topic id="pcap-file">
+                            <title>PCAP File Mode</title>
+                            <children>
+                                <topic id="storage-perm">
+                                    <title>Storage Permissions</title>
+                                    <children>
+                                        <topic id="permission-request"><title>Permission Request Flow</title></topic>
+                                        <topic id="storage-access"><title>Storage Access Validation</title></topic>
+                                        <topic id="permission-persist"><title>Permission Persistence</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="file-ops">
+                                    <title>File Operations</title>
+                                    <children>
+                                        <topic id="file-creation"><title>File Creation/Naming</title></topic>
+                                        <topic id="write-performance"><title>Write Performance</title></topic>
+                                        <topic id="file-integrity"><title>File Integrity</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="sharing">
+                                    <title>Sharing Function</title>
+                                    <children>
+                                        <topic id="share-intent"><title>Share Intent Handling</title></topic>
+                                        <topic id="format-compat"><title>Format Compatibility</title></topic>
+                                        <topic id="share-security"><title>Sharing Security</title></topic>
+                                    </children>
+                                </topic>
+                            </children>
+                        </topic>
+                        <topic id="udp-export">
+                            <title>UDP Exporter</title>
+                            <children>
+                                <topic id="conn-setup">
+                                    <title>Connection Setup</title>
+                                    <children>
+                                        <topic id="endpoint-config"><title>Endpoint Configuration</title></topic>
+                                        <topic id="conn-validation"><title>Connection Validation</title></topic>
+                                        <topic id="retry-mechanism"><title>Retry Mechanism</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="real-time">
+                                    <title>Real-time Streaming</title>
+                                    <children>
+                                        <topic id="stream-performance"><title>Streaming Performance</title></topic>
+                                        <topic id="packet-loss"><title>Packet Loss Handling</title></topic>
+                                        <topic id="bandwidth-usage"><title>Bandwidth Management</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="tool-integ">
+                                    <title>Tool Integration</title>
+                                    <children>
+                                        <topic id="wireshark-compat"><title>Wireshark Compatibility</title></topic>
+                                        <topic id="format-support"><title>Format Support</title></topic>
+                                        <topic id="integration-docs"><title>Integration Documentation</title></topic>
+                                    </children>
+                                </topic>
+                            </children>
+                        </topic>
+                    </children>
+                </topic>
+
+                <!-- TLS Decryption Tests -->
+                <topic id="tls-decrypt">
+                    <title>TLS Decryption Tests</title>
+                    <children>
+                        <topic id="setup-process">
+                            <title>Setup Process</title>
+                            <children>
+                                <topic id="addon-install">
+                                    <title>Addon Installation</title>
+                                    <children>
+                                        <topic id="addon-download"><title>Download and Verification</title></topic>
+                                        <topic id="install-process"><title>Installation Process</title></topic>
+                                        <topic id="version-compat"><title>Version Compatibility</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="cert-mgmt">
+                                    <title>Certificate Management</title>
+                                    <children>
+                                        <topic id="cert-generation"><title>Certificate Generation</title></topic>
+                                        <topic id="cert-install"><title>Certificate Installation</title></topic>
+                                        <topic id="trust-settings"><title>Trust Settings</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="perm-config">
+                                    <title>Permission Config</title>
+                                    <children>
+                                        <topic id="system-perm"><title>System Permissions</title></topic>
+                                        <topic id="app-perm"><title>App-specific Permissions</title></topic>
+                                        <topic id="security-warnings"><title>Security Warning Handling</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="external-mitm">
+                                    <title>External Mitmproxy</title>
+                                    <children>
+                                        <topic id="proxy-setup"><title>Proxy Configuration</title></topic>
+                                        <topic id="connection-handling"><title>Connection Management</title></topic>
+                                        <topic id="addon-integration"><title>Custom Addon Support</title></topic>
+                                    </children>
+                                </topic>
+                            </children>
+                        </topic>
+                        <topic id="decrypt-rules">
+                            <title>Decryption Rules</title>
+                            <children>
+                                <topic id="rule-create">
+                                    <title>Rule Creation</title>
+                                    <children>
+                                        <topic id="rule-params"><title>Rule Parameters</title></topic>
+                                        <topic id="validation"><title>Rule Validation</title></topic>
+                                        <topic id="rule-priority"><title>Rule Priority Handling</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="app-rules">
+                                    <title>App-specific Rules</title>
+                                    <children>
+                                        <topic id="app-selection"><title>App Selection Interface</title></topic>
+                                        <topic id="rule-inheritance"><title>Rule Inheritance</title></topic>
+                                        <topic id="conflict-resolution"><title>Conflict Resolution</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="domain-filter">
+                                    <title>Domain Filtering</title>
+                                    <children>
+                                        <topic id="pattern-matching"><title>Pattern Matching</title></topic>
+                                        <topic id="wildcard-support"><title>Wildcard Support</title></topic>
+                                        <topic id="filter-performance"><title>Filter Performance</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="rule-management">
+                                    <title>Rule Management</title>
+                                    <children>
+                                        <topic id="rule-export"><title>Rule Export/Import</title></topic>
+                                        <topic id="bulk-operations"><title>Bulk Operations</title></topic>
+                                        <topic id="persistence"><title>Rule Persistence</title></topic>
+                                    </children>
+                                </topic>
+                            </children>
+                        </topic>
+                    </children>
+                </topic>
+
+                <!-- Advanced Features -->
+                <topic id="advanced">
+                    <title>Advanced Features</title>
+                    <children>
+                        <topic id="dns-config">
+                            <title>DNS Configuration</title>
+                            <children>
+                                <topic id="server-detect">
+                                    <title>Server Detection</title>
+                                    <children>
+                                        <topic id="auto-detect"><title>Auto Detection</title></topic>
+                                        <topic id="manual-config"><title>Manual Configuration</title></topic>
+                                        <topic id="fallback-handling"><title>Fallback Handling</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="proto-config">
+                                    <title>Protocol Config</title>
+                                    <children>
+                                        <topic id="dns-protocols"><title>DNS Protocol Support</title></topic>
+                                        <topic id="protocol-switch"><title>Protocol Switching</title></topic>
+                                        <topic id="error-recovery"><title>Error Recovery</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="doh-integ">
+                                    <title>DoH Integration</title>
+                                    <children>
+                                        <topic id="doh-providers"><title>Provider Management</title></topic>
+                                        <topic id="tls-handling"><title>TLS Handling</title></topic>
+                                        <topic id="query-privacy"><title>Query Privacy</title></topic>
+                                    </children>
+                                </topic>
+                            </children>
+                        </topic>
+                        <topic id="root-capture">
+                            <title>Root Capture</title>
+                            <children>
+                                <topic id="root-perm">
+                                    <title>Root Permissions</title>
+                                    <children>
+                                        <topic id="su-request"><title>SU Request Handling</title></topic>
+                                        <topic id="perm-validation"><title>Permission Validation</title></topic>
+                                        <topic id="security-checks"><title>Security Checks</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="interface-sel">
+                                    <title>Interface Selection</title>
+                                    <children>
+                                        <topic id="interface-list"><title>Interface Listing</title></topic>
+                                        <topic id="selection-ui"><title>Selection Interface</title></topic>
+                                        <topic id="state-persist"><title>State Persistence</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="capture-config">
+                                    <title>Capture Config</title>
+                                    <children>
+                                        <topic id="capture-params"><title>Capture Parameters</title></topic>
+                                        <topic id="filter-rules"><title>Filter Rules</title></topic>
+                                        <topic id="performance-opts"><title>Performance Options</title></topic>
+                                    </children>
+                                </topic>
+                            </children>
+                        </topic>
+                        <topic id="pcap-trailer">
+                            <title>PCAPdroid Trailer</title>
+                            <children>
+                                <topic id="trailer-format">
+                                    <title>Trailer Format</title>
+                                    <children>
+                                        <topic id="format-spec"><title>Format Specification</title></topic>
+                                        <topic id="compatibility"><title>Tool Compatibility</title></topic>
+                                        <topic id="validation"><title>Format Validation</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="data-handling">
+                                    <title>Data Handling</title>
+                                    <children>
+                                        <topic id="data-integrity"><title>Data Integrity</title></topic>
+                                        <topic id="processing"><title>Data Processing</title></topic>
+                                        <topic id="storage"><title>Storage Management</title></topic>
+                                    </children>
+                                </topic>
+                            </children>
+                        </topic>
+                        <topic id="js-injector">
+                            <title>JS Injector</title>
+                            <children>
+                                <topic id="script-mgmt">
+                                    <title>Script Management</title>
+                                    <children>
+                                        <topic id="script-editor"><title>Script Editor</title></topic>
+                                        <topic id="validation"><title>Script Validation</title></topic>
+                                        <topic id="persistence"><title>Script Persistence</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="injection-process">
+                                    <title>Injection Process</title>
+                                    <children>
+                                        <topic id="timing"><title>Injection Timing</title></topic>
+                                        <topic id="target-selection"><title>Target Selection</title></topic>
+                                        <topic id="error-handling"><title>Error Handling</title></topic>
+                                    </children>
+                                </topic>
+                            </children>
+                        </topic>
+                        <topic id="tor-integration">
+                            <title>Tor Integration</title>
+                            <children>
+                                <topic id="tor-setup">
+                                    <title>Tor Setup</title>
+                                    <children>
+                                        <topic id="installation"><title>Installation Process</title></topic>
+                                        <topic id="configuration"><title>Configuration Options</title></topic>
+                                        <topic id="validation"><title>Setup Validation</title></topic>
+                                    </children>
+                                </topic>
+                                <topic id="traffic-routing">
+                                    <title>Traffic Routing</title>
+                                    <children>
+                                        <topic id="route-rules"><title>Routing Rules</title></topic>
+                                        <topic id="circuit-mgmt"><title>Circuit Management</title></topic>
+                                        <topic id="leak-prevention"><title>Leak Prevention</title></topic>
+                                    </children>
+                                </topic>
+                            </children>
+                        </topic>
+                    </children>
+                </topic>
+
+                <!-- Compatibility Tests -->
+                <topic id="compatibility">
+                    <title>Compatibility Tests</title>
+                    <children>
+                        <topic id="android-ver">
+                            <title>Android Version Support</title>
+                            <children>
+                                <topic id="version-compat"><title>Version Compatibility</title></topic>
+                                <topic id="perm-model"><title>Permission Model</title></topic>
+                                <topic id="api-features"><title>API Features</title></topic>
+                            </children>
+                        </topic>
+                        <topic id="device-compat">
+                            <title>Device Compatibility</title>
+                            <children>
+                                <topic id="screen-compat"><title>Screen Compatibility</title></topic>
+                                <topic id="resource-mgmt"><title>Resource Management</title></topic>
+                                <topic id="hw-variation"><title>Hardware Variation</title></topic>
+                            </children>
+                        </topic>
+                        <topic id="network-types">
+                            <title>Network Types</title>
+                            <children>
+                                <topic id="mobile-data"><title>Mobile Data</title></topic>
+                                <topic id="wifi-func"><title>WiFi Function</title></topic>
+                                <topic id="vpn-coexist"><title>VPN Coexistence</title></topic>
+                            </children>
+                        </topic>
+                    </children>
+                </topic>
+
+                <!-- Special Scenarios -->
+                <topic id="special">
+                    <title>Special Scenarios</title>
+                    <children>
+                        <topic id="error-handling">
+                            <title>Error Handling</title>
+                            <children>
+                                <topic id="network-disc"><title>Network Disconnection</title></topic>
+                                <topic id="perm-denial"><title>Permission Denial</title></topic>
+                                <topic id="resource-exhaust"><title>Resource Exhaustion</title></topic>
+                            </children>
+                        </topic>
+                        <topic id="performance">
+                            <title>Performance</title>
+                            <children>
+                                <topic id="memory-usage"><title>Memory Usage</title></topic>
+                                <topic id="cpu-util"><title>CPU Utilization</title></topic>
+                                <topic id="battery-impact"><title>Battery Impact</title></topic>
+                            </children>
+                        </topic>
+                        <topic id="security">
+                            <title>Security</title>
+                            <children>
+                                <topic id="cert-valid"><title>Certificate Validation</title></topic>
+                                <topic id="data-protect"><title>Data Protection</title></topic>
+                                <topic id="privacy"><title>Privacy Features</title></topic>
+                            </children>
+                        </topic>
+                    </children>
+                </topic>
+
+                <!-- Integration Tests -->
+                <topic id="integration">
+                    <title>Integration Tests</title>
+                    <children>
+                        <topic id="external-tools">
+                            <title>External Tools</title>
+                            <children>
+                                <topic id="wireshark"><title>Wireshark Integration</title></topic>
+                                <topic id="mitmproxy"><title>Mitmproxy Operation</title></topic>
+                                <topic id="invizible"><title>InviZible Pro/Tor</title></topic>
+                            </children>
+                        </topic>
+                    </children>
+                </topic>
+            </children>
+
+            <!-- Test Methods -->
+            <children>
+                <topic id="test-methods">
+                    <title>Test Methods</title>
+                    <children>
+                        <topic id="orthogonal"><title>Orthogonal Testing</title></topic>
+                        <topic id="boundary"><title>Boundary Analysis</title></topic>
+                        <topic id="equivalence"><title>Equivalence Partitioning</title></topic>
+                    </children>
+                </topic>
+            </children>
+
+            <!-- Test Types -->
+            <children>
+                <topic id="test-types">
+                    <title>Test Types</title>
+                    <children>
+                        <topic id="functional"><title>Functional UI Testing</title></topic>
+                        <topic id="compat"><title>Compatibility Testing</title></topic>
+                        <topic id="special"><title>Special Scenario Testing</title></topic>
+                    </children>
+                </topic>
+            </children>
+        </topic>
+    </sheet>
+</xmap-content>

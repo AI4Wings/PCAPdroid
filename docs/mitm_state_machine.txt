@@ -1,0 +1,69 @@
+MITM Service State Machine Diagram
+================================
+
+Initial State: Disconnected
+-----------------
+                                                          
+[Disconnected] ----connect()----> [Binding] 
+                                    |
+                                    | onServiceConnected()
+                                    v
+[Connected] <--------------------[Service Ready]
+    |                               |
+    |                               | if(mStopRequested)
+    |                               |    stopProxy()
+    |                               | else
+    |                               |    onMitmServiceConnect()
+    |                               |
+    | if(isDozeEnabled)             |
+    |    disableDoze() ------------>|
+    |                               |
+    | startProxy() ----------------->|
+    |                               |
+    | stopProxy() ------------------>|
+    |                               |
+    |                               |
+    |        onServiceDisconnected()|
+    |        onBindingDied()        |
+    |        onNullBinding()        |
+    |            |                  |
+    |            v                  |
+    +------> [Disconnected] <-------+
+
+State Transitions:
+----------------
+1. connect() -> Binding
+   - Calls bindService() with BIND_ALLOW_ACTIVITY_STARTS
+   - Returns false if binding fails
+   
+2. Binding -> Service Ready
+   - Triggered by onServiceConnected()
+   - Creates messenger for service communication
+   
+3. Service Ready -> Connected
+   - Checks mStopRequested flag
+   - Either calls stopProxy() or notifies listener
+   
+4. Connected -> Service Ready
+   - Can trigger disableDoze() if battery optimization enabled
+   - Can start/stop proxy service
+   
+5. Any State -> Disconnected
+   - onServiceDisconnected(): normal unbinding
+   - onBindingDied(): binding died unexpectedly  
+   - onNullBinding(): service returned null binding
+   - disconnect(): manual unbinding
+
+Preconditions:
+-------------
+- Battery optimization check requires Android M+
+- BIND_ALLOW_ACTIVITY_STARTS required for battery prompt
+- Service must be installed and available
+- Proper permissions must be granted
+
+Error Handling:
+-------------
+- Failed binding attempts trigger unbind
+- Service disconnection triggers cleanup
+- Null bindings are properly handled
+- RemoteException handling in all IPC calls
