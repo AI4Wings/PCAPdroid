@@ -164,10 +164,6 @@ public class CaptureService extends VpnService implements Runnable {
     private BroadcastReceiver mNewAppsInstallReceiver;
     private Utils.PrivateDnsMode mPrivateDnsMode;
 
-    /* The maximum connections to log into the ConnectionsRegister. Older connections are dropped.
-     * Max estimated memory usage: less than 4 MB (+8 MB with payload mode minimal). */
-    public static final int CONNECTIONS_LOG_SIZE = 8192;
-
     /* The IP address of the virtual network interface */
     public static final String VPN_IP_ADDRESS = "10.215.173.1";
     public static final String VPN_IP6_ADDRESS = "fd00:2:fd00:1:fd00:1:fd00:1";
@@ -346,7 +342,7 @@ public class CaptureService extends VpnService implements Runnable {
         last_bytes = 0;
         last_connections = 0;
         mLowMemory = false;
-        conn_reg = new ConnectionsRegister(this, CONNECTIONS_LOG_SIZE);
+        conn_reg = new ConnectionsRegister(this, mSettings.dynamic_buffer_limit);
         mDumper = null;
         mDumpQueue = null;
         mPendingUpdates.clear();
@@ -1253,10 +1249,43 @@ public class CaptureService extends VpnService implements Runnable {
 
     private void checkAvailableHeap() {
         // This does not account per-app jvm limits
+        Runtime runtime = Runtime.getRuntime();
+        long maxMemory = runtime.maxMemory();
+        long totalMemory = runtime.totalMemory();
         long availableHeap = Utils.getAvailableHeap();
+        double memoryUsageRatio = 1.0 - ((double)availableHeap / totalMemory);
 
+        // Log memory stats for debugging
+        Log.d(TAG, String.format("Memory stats: available=%s, total=%s, max=%s, usage=%.1f%%",
+                Utils.formatBytes(availableHeap),
+                Utils.formatBytes(totalMemory),
+                Utils.formatBytes(maxMemory),
+                memoryUsageRatio * 100));
+
+        // Proactively reduce buffer size if memory usage is high
+        if(!mLowMemory && conn_reg != null) {
+            if(memoryUsageRatio >= 0.80) {
+                // Critical memory usage - reduce buffer size by 50%
+                int newSize = mSettings.dynamic_buffer_limit / 2;
+                if(newSize >= 1024) { // Don't go below reasonable minimum
+                    Log.w(TAG, "Critical memory usage detected, reducing buffer size to " + newSize);
+                    conn_reg.resize(newSize);
+                    mSettings.dynamic_buffer_limit = newSize;
+                }
+            } else if(memoryUsageRatio >= 0.70) {
+                // High memory usage - reduce buffer size by 25%
+                int newSize = (int)(mSettings.dynamic_buffer_limit * 0.75);
+                if(newSize >= 1024) {
+                    Log.w(TAG, "High memory usage detected, reducing buffer size to " + newSize);
+                    conn_reg.resize(newSize);
+                    mSettings.dynamic_buffer_limit = newSize;
+                }
+            }
+        }
+
+        // Handle critical memory conditions
         if(availableHeap <= Utils.LOW_HEAP_THRESHOLD) {
-            Log.w(TAG, "Detected low HEAP memory: " + Utils.formatBytes(availableHeap));
+            Log.w(TAG, "Detected critically low HEAP memory: " + Utils.formatBytes(availableHeap));
             handleLowMemory();
         }
     }
