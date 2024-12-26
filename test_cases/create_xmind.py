@@ -1025,6 +1025,73 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                             </topics>
                         </children>
                     </topic>
+                    <topic id="7.2">
+                        <title>Performance Optimization</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="7.2.1">
+                                    <title>Memory Management</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.2.1.1"><title>Usage monitoring</title></topic>
+                                            <topic id="7.2.1.2"><title>Memory efficiency</title></topic>
+                                            <topic id="7.2.1.3"><title>Leak detection</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.2.2">
+                                    <title>CPU Performance</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.2.2.1"><title>Utilization monitoring</title></topic>
+                                            <topic id="7.2.2.2"><title>Load handling</title></topic>
+                                            <topic id="7.2.2.3"><title>Background usage</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.2.3">
+                                    <title>Battery Optimization</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.2.3.1"><title>Power consumption</title></topic>
+                                            <topic id="7.2.3.2"><title>Usage patterns</title></topic>
+                                            <topic id="7.2.3.3"><title>Background impact</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.2.4">
+                                    <title>Resource Adaptation</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.2.4.1"><title>Device scaling</title></topic>
+                                            <topic id="7.2.4.2"><title>Resource allocation</title></topic>
+                                            <topic id="7.2.4.3"><title>Performance tuning</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.2.5">
+                                    <title>Stability Testing</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.2.5.1"><title>Long-term monitoring</title></topic>
+                                            <topic id="7.2.5.2"><title>Resource stability</title></topic>
+                                            <topic id="7.2.5.3"><title>Performance degradation</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.2.6">
+                                    <title>Load Testing</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.2.6.1"><title>High traffic handling</title></topic>
+                                            <topic id="7.2.6.2"><title>Resource management</title></topic>
+                                            <topic id="7.2.6.3"><title>Recovery testing</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
                 </topics>
             </children>
         </topic>
