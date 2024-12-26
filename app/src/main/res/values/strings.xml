@@ -117,6 +117,7 @@
     <string name="error">Error</string>
     <string name="conn_status_unreachable">Unreachable</string>
     <string name="other_prefs">Other</string>
+    <string name="notification_sensitive">Sensitive content hidden</string>
     <string name="app_language">App language</string>
     <string name="lang_english">English</string>
     <string name="system_default">System default</string>

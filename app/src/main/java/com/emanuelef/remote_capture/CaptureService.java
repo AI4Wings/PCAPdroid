@@ -681,6 +681,19 @@ public class CaptureService extends VpnService implements Runnable {
         // Status notification builder
         PendingIntent pi = PendingIntent.getActivity(this, 0,
                 new Intent(this, MainActivity.class), Utils.getIntentFlags(PendingIntent.FLAG_UPDATE_CURRENT));
+        // Create public version of status notification (no connection details)
+        Notification publicStatusNotification = new NotificationCompat.Builder(this, NOTIFY_CHAN_VPNSERVICE)
+                .setSmallIcon(R.drawable.ic_logo)
+                .setColor(ContextCompat.getColor(this, R.color.colorPrimary))
+                .setContentIntent(pi)
+                .setOngoing(true)
+                .setAutoCancel(false)
+                .setContentTitle(getResources().getString(R.string.capture_running))
+                .setContentText(getString(R.string.notification_sensitive))
+                .setCategory(NotificationCompat.CATEGORY_STATUS)
+                .setPriority(NotificationCompat.PRIORITY_LOW)
+                .build();
+
         mStatusBuilder = new NotificationCompat.Builder(this, NOTIFY_CHAN_VPNSERVICE)
                 .setSmallIcon(R.drawable.ic_logo)
                 .setColor(ContextCompat.getColor(this, R.color.colorPrimary))
@@ -690,14 +703,26 @@ public class CaptureService extends VpnService implements Runnable {
                 .setContentTitle(getResources().getString(R.string.capture_running))
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setCategory(NotificationCompat.CATEGORY_STATUS)
+                .setPublicVersion(publicStatusNotification)
                 .setPriority(NotificationCompat.PRIORITY_LOW); // see IMPORTANCE_LOW
 
         // Malware notification builder
+        // Create public version of malware notification (no sensitive details)
+        Notification publicMalwareNotification = new NotificationCompat.Builder(this, NOTIFY_CHAN_MALWARE_DETECTION)
+                .setSmallIcon(R.drawable.ic_skull)
+                .setAutoCancel(true)
+                .setContentTitle(getString(R.string.malware_detection))
+                .setContentText(getString(R.string.notification_sensitive))
+                .setCategory(NotificationCompat.CATEGORY_STATUS)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .build();
+
         mMalwareBuilder = new NotificationCompat.Builder(this, NOTIFY_CHAN_MALWARE_DETECTION)
                 .setSmallIcon(R.drawable.ic_skull)
                 .setAutoCancel(true)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setCategory(NotificationCompat.CATEGORY_STATUS)
+                .setPublicVersion(publicMalwareNotification)
                 .setPriority(NotificationCompat.PRIORITY_HIGH); // see IMPORTANCE_HIGH
     }
 
@@ -753,6 +778,16 @@ public class CaptureService extends VpnService implements Runnable {
     }
 
     public void notifyLowMemory(CharSequence msg) {
+        // Create public version of low memory notification (no specific memory details)
+        Notification publicNotification = new NotificationCompat.Builder(this, NOTIFY_CHAN_OTHER)
+                .setAutoCancel(true)
+                .setSmallIcon(R.drawable.ic_logo)
+                .setColor(ContextCompat.getColor(this, R.color.colorPrimary))
+                .setCategory(NotificationCompat.CATEGORY_STATUS)
+                .setContentTitle(getString(R.string.low_memory))
+                .setContentText(getString(R.string.notification_sensitive))
+                .build();
+
         Notification notification = new NotificationCompat.Builder(this, NOTIFY_CHAN_OTHER)
                 .setAutoCancel(true)
                 .setSmallIcon(R.drawable.ic_logo)
@@ -762,6 +797,7 @@ public class CaptureService extends VpnService implements Runnable {
                 .setWhen(System.currentTimeMillis())
                 .setContentTitle(getString(R.string.low_memory))
                 .setContentText(msg)
+                .setPublicVersion(publicNotification)
                 .build();
 
         mHandler.post(() -> Utils.sendImportantNotification(this, NOTIFY_ID_LOW_MEMORY, notification));
