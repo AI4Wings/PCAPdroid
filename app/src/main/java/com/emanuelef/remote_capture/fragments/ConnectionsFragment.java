@@ -89,6 +89,7 @@ public class ConnectionsFragment extends Fragment implements ConnectionsListener
     private EmptyRecyclerView mRecyclerView;
     private TextView mEmptyText;
     private TextView mOldConnectionsText;
+    private TextView mBufferUsage;
     private boolean autoScroll;
     private boolean listenerSet;
     private ChipGroup mActiveFilter;
@@ -184,6 +185,7 @@ public class ConnectionsFragment extends Fragment implements ConnectionsListener
         mApps = new AppsResolver(requireContext());
 
         mEmptyText = view.findViewById(R.id.no_connections);
+        mBufferUsage = view.findViewById(R.id.buffer_usage);
         mActiveFilter = view.findViewById(R.id.active_filter);
         mActiveFilter.setOnCheckedStateChangeListener((group, checkedIds) -> {
             if(mAdapter != null) {
@@ -738,6 +740,17 @@ public class ConnectionsFragment extends Fragment implements ConnectionsListener
         // using runOnUi to populate the adapter as soon as registerConnsListener is called
         Utils.runOnUi(() -> {
             Log.d(TAG, "New connections size: " + num_connections);
+
+            // Update buffer usage display
+            ConnectionsRegister reg = CaptureService.requireConnsRegister();
+            if(reg != null) {
+                String usageText = String.format(getString(R.string.buffer_usage_format),
+                        num_connections, CaptureService.requireInstance().mSettings.dynamic_buffer_limit);
+                mBufferUsage.setText(usageText);
+                mBufferUsage.setVisibility(View.VISIBLE);
+            } else {
+                mBufferUsage.setVisibility(View.GONE);
+            }
 
             mAdapter.connectionsChanges(num_connections);
 

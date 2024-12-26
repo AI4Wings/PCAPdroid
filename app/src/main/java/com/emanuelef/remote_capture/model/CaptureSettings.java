@@ -40,6 +40,7 @@ public class CaptureSettings implements Serializable {
     public int snaplen = 0;
     public int max_pkts_per_flow = 0;
     public int max_dump_size = 0;
+    public int dynamic_buffer_limit = 8192; // Default to previous fixed size
     public String mitmproxy_opts;
 
     public CaptureSettings(Context ctx, SharedPreferences prefs) {
@@ -85,6 +86,7 @@ public class CaptureSettings implements Serializable {
         snaplen = getInt(intent, Prefs.PREF_SNAPLEN, 0);
         max_pkts_per_flow = getInt(intent, Prefs.PREF_MAX_PKTS_PER_FLOW, 0);
         max_dump_size = getInt(intent, Prefs.PREF_MAX_DUMP_SIZE, 0);
+        dynamic_buffer_limit = getInt(intent, "dynamic_buffer_limit", 8192);
         tls_decryption = getBool(intent, Prefs.PREF_TLS_DECRYPTION_KEY, false);
         full_payload = false;
         block_quic_mode = Prefs.getBlockQuicMode(getString(intent, "block_quic", Prefs.BLOCK_QUIC_MODE_DEFAULT));
