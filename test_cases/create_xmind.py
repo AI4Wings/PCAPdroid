@@ -183,6 +183,73 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                                         </topics>
                                     </children>
                                 </topic>
+                                <topic id="2.2">
+                                    <title>Settings Management</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="2.2.1">
+                                                <title>Settings Persistence</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="2.2.1.1"><title>Save and restore</title></topic>
+                                                        <topic id="2.2.1.2"><title>Default handling</title></topic>
+                                                        <topic id="2.2.1.3"><title>State preservation</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="2.2.2">
+                                                <title>Permission Management</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="2.2.2.1"><title>Permission requests</title></topic>
+                                                        <topic id="2.2.2.2"><title>State handling</title></topic>
+                                                        <topic id="2.2.2.3"><title>Feature access</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="2.2.3">
+                                                <title>Feature Toggles</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="2.2.3.1"><title>Toggle behavior</title></topic>
+                                                        <topic id="2.2.3.2"><title>Dependencies</title></topic>
+                                                        <topic id="2.2.3.3"><title>UI updates</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="2.2.4">
+                                                <title>Settings Migration</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="2.2.4.1"><title>Version upgrades</title></topic>
+                                                        <topic id="2.2.4.2"><title>Compatibility</title></topic>
+                                                        <topic id="2.2.4.3"><title>Data preservation</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="2.2.5">
+                                                <title>Configuration Changes</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="2.2.5.1"><title>Device changes</title></topic>
+                                                        <topic id="2.2.5.2"><title>UI rebuilding</title></topic>
+                                                        <topic id="2.2.5.3"><title>State recovery</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="2.2.6">
+                                                <title>Import/Export</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="2.2.6.1"><title>File operations</title></topic>
+                                                        <topic id="2.2.6.2"><title>Data validation</title></topic>
+                                                        <topic id="2.2.6.3"><title>Restoration</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
                             </topics>
                         </children>
                     </topic>
