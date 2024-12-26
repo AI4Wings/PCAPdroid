@@ -1092,6 +1092,73 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                             </topics>
                         </children>
                     </topic>
+                    <topic id="7.3">
+                        <title>Security Features</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="7.3.1">
+                                    <title>Certificate Management</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.3.1.1"><title>Certificate validation</title></topic>
+                                            <topic id="7.3.1.2"><title>Trust chain verification</title></topic>
+                                            <topic id="7.3.1.3"><title>Revocation handling</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.3.2">
+                                    <title>Data Security</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.3.2.1"><title>Storage encryption</title></topic>
+                                            <topic id="7.3.2.2"><title>Access control</title></topic>
+                                            <topic id="7.3.2.3"><title>Secure deletion</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.3.3">
+                                    <title>Privacy Controls</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.3.3.1"><title>Data masking</title></topic>
+                                            <topic id="7.3.3.2"><title>Privacy filters</title></topic>
+                                            <topic id="7.3.3.3"><title>User controls</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.3.4">
+                                    <title>Framework Integration</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.3.4.1"><title>SELinux compliance</title></topic>
+                                            <topic id="7.3.4.2"><title>Permission model</title></topic>
+                                            <topic id="7.3.4.3"><title>Sandbox isolation</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.3.5">
+                                    <title>Attack Protection</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.3.5.1"><title>Interception prevention</title></topic>
+                                            <topic id="7.3.5.2"><title>Tamper detection</title></topic>
+                                            <topic id="7.3.5.3"><title>Recovery mechanisms</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.3.6">
+                                    <title>Security Monitoring</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.3.6.1"><title>Event logging</title></topic>
+                                            <topic id="7.3.6.2"><title>Audit trails</title></topic>
+                                            <topic id="7.3.6.3"><title>Log management</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
                 </topics>
             </children>
         </topic>
