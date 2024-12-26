@@ -817,6 +817,73 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                             </topics>
                         </children>
                     </topic>
+                    <topic id="6.2">
+                        <title>Device Support</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="6.2.1">
+                                    <title>Screen Compatibility</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="6.2.1.1"><title>Phone screen sizes</title></topic>
+                                            <topic id="6.2.1.2"><title>Resolution support</title></topic>
+                                            <topic id="6.2.1.3"><title>UI scaling</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="6.2.2">
+                                    <title>Tablet Support</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="6.2.2.1"><title>Orientation handling</title></topic>
+                                            <topic id="6.2.2.2"><title>Split-screen support</title></topic>
+                                            <topic id="6.2.2.3"><title>Multi-window mode</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="6.2.3">
+                                    <title>Resource Management</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="6.2.3.1"><title>Memory optimization</title></topic>
+                                            <topic id="6.2.3.2"><title>CPU efficiency</title></topic>
+                                            <topic id="6.2.3.3"><title>Battery impact</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="6.2.4">
+                                    <title>Hardware Support</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="6.2.4.1"><title>CPU architectures</title></topic>
+                                            <topic id="6.2.4.2"><title>Network hardware</title></topic>
+                                            <topic id="6.2.4.3"><title>Sensor handling</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="6.2.5">
+                                    <title>Resource Constraints</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="6.2.5.1"><title>Low memory handling</title></topic>
+                                            <topic id="6.2.5.2"><title>Storage management</title></topic>
+                                            <topic id="6.2.5.3"><title>Network adaptation</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="6.2.6">
+                                    <title>OEM Compatibility</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="6.2.6.1"><title>Custom UI support</title></topic>
+                                            <topic id="6.2.6.2"><title>Vendor features</title></topic>
+                                            <topic id="6.2.6.3"><title>Special modes</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
                 </topics>
             </children>
         </topic>
