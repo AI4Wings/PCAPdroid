@@ -112,6 +112,80 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                             </topics>
                         </children>
                     </topic>
+                    <topic id="2">
+                        <title>UI/UX</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="2.1">
+                                    <title>Navigation and Display</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="2.1.1">
+                                                <title>Navigation Drawer</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="2.1.1.1"><title>Drawer operation</title></topic>
+                                                        <topic id="2.1.1.2"><title>Menu item navigation</title></topic>
+                                                        <topic id="2.1.1.3"><title>Gesture handling</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="2.1.2">
+                                                <title>Connection List</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="2.1.2.1"><title>Real-time updates</title></topic>
+                                                        <topic id="2.1.2.2"><title>Scroll performance</title></topic>
+                                                        <topic id="2.1.2.3"><title>Detail display</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="2.1.3">
+                                                <title>Search Interface</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="2.1.3.1"><title>Search functionality</title></topic>
+                                                        <topic id="2.1.3.2"><title>Filter operations</title></topic>
+                                                        <topic id="2.1.3.3"><title>State preservation</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="2.1.4">
+                                                <title>Compatibility</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="2.1.4.1"><title>Screen size adaptation</title></topic>
+                                                        <topic id="2.1.4.2"><title>Orientation handling</title></topic>
+                                                        <topic id="2.1.4.3"><title>Layout consistency</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="2.1.5">
+                                                <title>Error Handling</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="2.1.5.1"><title>Error display</title></topic>
+                                                        <topic id="2.1.5.2"><title>Recovery options</title></topic>
+                                                        <topic id="2.1.5.3"><title>State management</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="2.1.6">
+                                                <title>Performance</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="2.1.6.1"><title>UI responsiveness</title></topic>
+                                                        <topic id="2.1.6.2"><title>Load handling</title></topic>
+                                                        <topic id="2.1.6.3"><title>Update efficiency</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
                 </topics>
             </children>
         </topic>
