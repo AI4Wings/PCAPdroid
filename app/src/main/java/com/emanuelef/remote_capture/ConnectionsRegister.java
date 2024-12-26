@@ -195,46 +195,44 @@ public class ConnectionsRegister {
 
     // called by the CaptureService in a separate thread when connections should be updated
     public synchronized void connectionsUpdates(ConnectionUpdate[] updates) {
-        if(mCurItems == 0)
+        if(mItems.isEmpty())
             return;
 
-        int first_pos = firstPos();
-        int last_pos = lastPos();
-        int first_id = mItemsRing[first_pos].incr_id;
-        int last_id = mItemsRing[last_pos].incr_id;
+        int first_id = mItems.get(0).incr_id;
+        int last_id = mItems.get(mItems.size() - 1).incr_id;
         int []changed_pos = new int[updates.length];
         int k = 0;
 
-        Log.d(TAG, "connectionsUpdates: items=" + mCurItems + ", first_id=" + first_id + ", last_id=" + last_id);
+        Log.d(TAG, "connectionsUpdates: items=" + mItems.size() + ", first_id=" + first_id + ", last_id=" + last_id);
 
         for(ConnectionUpdate update: updates) {
             int id = update.incr_id;
 
-            // ignore updates for untracked items
-            if((id >= first_id) && (id <= last_id)) {
-                int pos = ((id - first_id) + first_pos) % mSize;
-                ConnectionDescriptor conn = mItemsRing[pos];
-                assert(conn.incr_id == id);
+            // Find the connection with matching ID
+            for(int i = 0; i < mItems.size(); i++) {
+                ConnectionDescriptor conn = mItems.get(i);
+                if(conn.incr_id == id) {
+                    // update the app stats
+                    AppStats stats = getAppsStatsOrCreate(conn.uid);
+                    stats.sentBytes += update.sent_bytes - conn.sent_bytes;
+                    stats.rcvdBytes += update.rcvd_bytes - conn.rcvd_bytes;
 
-                // update the app stats
-                AppStats stats = getAppsStatsOrCreate(conn.uid);
-                stats.sentBytes += update.sent_bytes - conn.sent_bytes;
-                stats.rcvdBytes += update.rcvd_bytes - conn.rcvd_bytes;
+                    //Log.d(TAG, "update " + update.incr_id + " -> " + update.update_type);
+                    conn.processUpdate(update);
+                    processConnectionStatus(conn, stats);
 
-                //Log.d(TAG, "update " + update.incr_id + " -> " + update.update_type);
-                conn.processUpdate(update);
-                processConnectionStatus(conn, stats);
-
-                changed_pos[k++] = (pos + mSize - first_pos) % mSize;
+                    changed_pos[k++] = i;
+                    break;
+                }
             }
         }
 
         if(k == 0)
-            // no updates for items in the ring
+            // no updates for tracked items
             return;
 
         if(k != updates.length)
-            // some untracked items where skipped, shrink the array
+            // some untracked items were skipped, shrink the array
             changed_pos = Arrays.copyOf(changed_pos, k);
 
         for(ConnectionsListener listener: mListeners)
