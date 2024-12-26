@@ -138,7 +138,13 @@
                 android:value="waits for the termination of the active VpnService"/>
         </service>
 
-        <receiver android:name="com.emanuelef.remote_capture.ActionReceiver" />
+        <receiver 
+            android:name="com.emanuelef.remote_capture.ActionReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.emanuelef.remote_capture.UNBLOCK_APP" />
+            </intent-filter>
+        </receiver>
 
         <receiver
             android:name=".BootReceiver"
