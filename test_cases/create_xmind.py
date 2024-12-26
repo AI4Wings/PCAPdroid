@@ -532,6 +532,73 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                                         </topics>
                                     </children>
                                 </topic>
+                                <topic id="4.2">
+                                    <title>Rule Management</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="4.2.1">
+                                                <title>Rule Creation</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="4.2.1.1"><title>Interface validation</title></topic>
+                                                        <topic id="4.2.1.2"><title>Parameter configuration</title></topic>
+                                                        <topic id="4.2.1.3"><title>Rule persistence</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="4.2.2">
+                                                <title>App-Specific Rules</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="4.2.2.1"><title>App selection</title></topic>
+                                                        <topic id="4.2.2.2"><title>Rule application</title></topic>
+                                                        <topic id="4.2.2.3"><title>Traffic filtering</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="4.2.3">
+                                                <title>Domain Filtering</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="4.2.3.1"><title>Pattern matching</title></topic>
+                                                        <topic id="4.2.3.2"><title>Wildcard handling</title></topic>
+                                                        <topic id="4.2.3.3"><title>Exclusion rules</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="4.2.4">
+                                                <title>Multi-App Support</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="4.2.4.1"><title>App compatibility</title></topic>
+                                                        <topic id="4.2.4.2"><title>Security handling</title></topic>
+                                                        <topic id="4.2.4.3"><title>Rule inheritance</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="4.2.5">
+                                                <title>Conflict Resolution</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="4.2.5.1"><title>Priority management</title></topic>
+                                                        <topic id="4.2.5.2"><title>Resolution logic</title></topic>
+                                                        <topic id="4.2.5.3"><title>Edge cases</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                            <topic id="4.2.6">
+                                                <title>Dynamic Updates</title>
+                                                <children>
+                                                    <topics type="attached">
+                                                        <topic id="4.2.6.1"><title>Live modifications</title></topic>
+                                                        <topic id="4.2.6.2"><title>Connection handling</title></topic>
+                                                        <topic id="4.2.6.3"><title>State management</title></topic>
+                                                    </topics>
+                                                </children>
+                                            </topic>
+                                        </topics>
+                                    </children>
+                                </topic>
                             </topics>
                         </children>
                     </topic>
