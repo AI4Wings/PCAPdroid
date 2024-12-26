@@ -1162,6 +1162,80 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                 </topics>
             </children>
         </topic>
+        <topic id="8">
+            <title>Integration Tests</title>
+            <children>
+                <topics type="attached">
+                    <topic id="8.1">
+                        <title>External Tool Integration</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="8.1.1">
+                                    <title>Wireshark Integration</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="8.1.1.1"><title>PCAP export</title></topic>
+                                            <topic id="8.1.1.2"><title>File format validation</title></topic>
+                                            <topic id="8.1.1.3"><title>Analysis compatibility</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="8.1.2">
+                                    <title>Mitmproxy Integration</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="8.1.2.1"><title>Connection handling</title></topic>
+                                            <topic id="8.1.2.2"><title>TLS decryption</title></topic>
+                                            <topic id="8.1.2.3"><title>Traffic monitoring</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="8.1.3">
+                                    <title>InviZible Integration</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="8.1.3.1"><title>Tor routing</title></topic>
+                                            <topic id="8.1.3.2"><title>Privacy verification</title></topic>
+                                            <topic id="8.1.3.3"><title>Performance monitoring</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="8.1.4">
+                                    <title>Version Management</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="8.1.4.1"><title>Version compatibility</title></topic>
+                                            <topic id="8.1.4.2"><title>Feature support</title></topic>
+                                            <topic id="8.1.4.3"><title>Migration handling</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="8.1.5">
+                                    <title>Data Exchange</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="8.1.5.1"><title>Format support</title></topic>
+                                            <topic id="8.1.5.2"><title>Data conversion</title></topic>
+                                            <topic id="8.1.5.3"><title>Integrity verification</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="8.1.6">
+                                    <title>Error Management</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="8.1.6.1"><title>Failure handling</title></topic>
+                                            <topic id="8.1.6.2"><title>Recovery process</title></topic>
+                                            <topic id="8.1.6.3"><title>State preservation</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                </topics>
+            </children>
+        </topic>
     </sheet>
 </xmap-content>'''
 
