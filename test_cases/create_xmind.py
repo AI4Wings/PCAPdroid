@@ -954,6 +954,80 @@ content_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no"?>
                 </topics>
             </children>
         </topic>
+        <topic id="7">
+            <title>Special Scenarios</title>
+            <children>
+                <topics type="attached">
+                    <topic id="7.1">
+                        <title>Error Management</title>
+                        <children>
+                            <topics type="attached">
+                                <topic id="7.1.1">
+                                    <title>Network Issues</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.1.1.1"><title>Disconnection handling</title></topic>
+                                            <topic id="7.1.1.2"><title>UI notification</title></topic>
+                                            <topic id="7.1.1.3"><title>Recovery process</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.1.2">
+                                    <title>Permission Management</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.1.2.1"><title>Permission denial</title></topic>
+                                            <topic id="7.1.2.2"><title>User guidance</title></topic>
+                                            <topic id="7.1.2.3"><title>State preservation</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.1.3">
+                                    <title>Resource Handling</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.1.3.1"><title>Memory management</title></topic>
+                                            <topic id="7.1.3.2"><title>Storage limits</title></topic>
+                                            <topic id="7.1.3.3"><title>CPU utilization</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.1.4">
+                                    <title>System Recovery</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.1.4.1"><title>Crash recovery</title></topic>
+                                            <topic id="7.1.4.2"><title>Service restoration</title></topic>
+                                            <topic id="7.1.4.3"><title>Data preservation</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.1.5">
+                                    <title>Multiple Errors</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.1.5.1"><title>Error prioritization</title></topic>
+                                            <topic id="7.1.5.2"><title>Concurrent handling</title></topic>
+                                            <topic id="7.1.5.3"><title>Resolution sequence</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                                <topic id="7.1.6">
+                                    <title>User Notifications</title>
+                                    <children>
+                                        <topics type="attached">
+                                            <topic id="7.1.6.1"><title>Notification delivery</title></topic>
+                                            <topic id="7.1.6.2"><title>Action handling</title></topic>
+                                            <topic id="7.1.6.3"><title>State management</title></topic>
+                                        </topics>
+                                    </children>
+                                </topic>
+                            </topics>
+                        </children>
+                    </topic>
+                </topics>
+            </children>
+        </topic>
     </sheet>
 </xmap-content>'''
 
