@@ -11,6 +11,11 @@
     <string name="installation_id" translatable="false">Installation ID</string>
     <string name="license_code" translatable="false">License code</string>
     <string name="root" translatable="false">root</string>
+    <string name="device_info">Device Info</string>
+    <string name="device_name_format">Device Name: %s</string>
+    <string name="device_model_format">Device Model: %s</string>
+    <string name="os_version_format">OS Version: %s</string>
+    
     <string name="app_license" translatable="false">PCAPdroid is distributed in the hope that it will be useful, but WITHOUT
         ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
         See the <a href='https://www.gnu.org/licenses/gpl-3.0-standalone.html'>GNU General Public License or later</a> for

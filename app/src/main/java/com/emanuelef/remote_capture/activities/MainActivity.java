@@ -688,6 +688,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         } else if(id == R.id.open_pcap) {
             startOpenPcapFile();
             return true;
+        } else if(id == R.id.action_device_info) {
+            startActivity(new Intent(MainActivity.this, DeviceInfoActivity.class));
+            return true;
         } else if (id == R.id.action_settings) {
             Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
